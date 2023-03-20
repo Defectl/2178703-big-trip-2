@@ -68,6 +68,6 @@ export default class TripEventsPresenter {
       document.removeEventListener('keydown', onEscKeyDown);
     });
 
-    render(pointComponent, this.#pointsList.element)
+    render(pointComponent, this.#pointsList.element);
   };
 }
