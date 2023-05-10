@@ -2,7 +2,6 @@ import AbstractStatefulView from '../framework/view/abstract-stateful-view.js';
 import { getDateTime } from '../utils/point.js';
 import { doCapitalizeString } from '../utils/common.js';
 import { POINT_TYPES } from '../mock/point.js';
-import dayjs from 'dayjs';
 
 const renderDestinationPictures = (pictures) => {
   let result = '';
@@ -177,12 +176,10 @@ export default class EditingPointView extends AbstractStatefulView {
 
   #pointTypeChangeHandler = (evt) => {
     evt.preventDefault();
-    console.log(this._state);
     this.updateElement({
       type: evt.target.value,
       offerIds: [],
     });
-    console.log(this._state);
   };
 
   #offersChangeHandler = (evt) => {
